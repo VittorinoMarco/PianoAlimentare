@@ -1326,8 +1326,501 @@ body {
 
 /* --- Print --- */
 @media print {
-    .bg-blobs, .nav-bar { display: none; }
+    .bg-blobs, .nav-bar, .page-switcher { display: none; }
     .section { display: block !important; }
     .macro-detail { max-height: none !important; opacity: 1 !important; }
     body { background: white; color: black; }
+}
+
+/* ============================================
+   PAGE SWITCHER
+   ============================================ */
+.page-switcher {
+    position: relative;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    padding: 12px 16px 0;
+}
+
+.page-link {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    transition: var(--transition);
+}
+
+.page-link:hover {
+    color: var(--text-secondary);
+    background: var(--glass-bg-hover);
+}
+
+.page-link.active {
+    color: var(--text-primary);
+    background: var(--accent-glow);
+    border-color: rgba(10, 132, 255, 0.3);
+}
+
+/* ============================================
+   ALLENAMENTO PAGE — Extra Styles
+   ============================================ */
+
+/* --- Section Subtitle --- */
+.section-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-top: -10px;
+    margin-bottom: 18px;
+}
+
+/* --- Equipment Grid --- */
+.equip-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.equip-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.equip-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.equip-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.equip-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.equip-name {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.92rem;
+}
+
+.equip-cost {
+    font-size: 0.78rem;
+    color: var(--success);
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+/* --- Week Schedule --- */
+.week-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.schedule-day {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.schedule-day:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.schedule-day.rest-day {
+    opacity: 0.7;
+}
+
+.sched-day-name {
+    font-weight: 700;
+    font-size: 0.82rem;
+    min-width: 36px;
+    color: var(--text-primary);
+}
+
+.sched-badge {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 10px;
+    min-width: 70px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.sched-badge.push {
+    background: rgba(10, 132, 255, 0.15);
+    color: #4db8ff;
+    border: 1px solid rgba(10, 132, 255, 0.25);
+}
+
+.sched-badge.pull {
+    background: rgba(255, 69, 58, 0.15);
+    color: #ff7b73;
+    border: 1px solid rgba(255, 69, 58, 0.25);
+}
+
+.sched-badge.legs {
+    background: rgba(48, 209, 88, 0.15);
+    color: #66e085;
+    border: 1px solid rgba(48, 209, 88, 0.25);
+}
+
+.sched-badge.rest {
+    background: rgba(255, 214, 10, 0.12);
+    color: #ffd93d;
+    border: 1px solid rgba(255, 214, 10, 0.2);
+}
+
+.sched-badge.rest-full {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sched-muscles {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* --- Timing Flow --- */
+.timing-flow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+.timing-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-sm);
+    min-width: 90px;
+    text-align: center;
+}
+
+.timing-step.highlight-timing {
+    background: var(--accent-glow);
+    border-color: rgba(10, 132, 255, 0.3);
+}
+
+.timing-time {
+    font-weight: 700;
+    font-size: 0.92rem;
+    color: var(--accent);
+}
+
+.timing-what {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.timing-arrow {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* --- Exercise Cards --- */
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.exercise-card {
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+.exercise-card.finisher {
+    border-left: 3px solid var(--warning);
+    cursor: default;
+}
+
+.exercise-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.exercise-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.exercise-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.exercise-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.exercise-sets {
+    font-size: 0.78rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.exercise-rest {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    padding: 3px 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.exercise-note {
+    padding: 10px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent);
+}
+
+.exercise-note p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    border-left: none !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+.muscle-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+.muscle-tag {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 8px;
+    background: rgba(10, 132, 255, 0.1);
+    color: #4db8ff;
+    border: 1px solid rgba(10, 132, 255, 0.2);
+}
+
+.muscle-tag.star {
+    background: rgba(255, 214, 10, 0.12);
+    color: #ffd93d;
+    border-color: rgba(255, 214, 10, 0.2);
+}
+
+.finisher-note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+    padding-left: 42px;
+}
+
+/* --- Workout Divider --- */
+.workout-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    margin: 6px 0;
+}
+
+.workout-divider::before,
+.workout-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.workout-divider span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+/* --- Progression Steps --- */
+.progression-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.prog-step {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.prog-step:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.prog-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.prog-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #5e5ce6);
+    color: white;
+    font-weight: 700;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+.prog-title {
+    font-weight: 500;
+    font-size: 0.92rem;
+    flex: 1;
+}
+
+/* --- Progression Table --- */
+.progression-table {
+    margin-top: 8px;
+}
+
+.prog-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prog-row:last-child {
+    border-bottom: none;
+}
+
+.prog-row span {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+
+.prog-row-header span {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Tricks --- */
+.tricks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.trick-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.trick-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.trick-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trick-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.trick-name {
+    font-weight: 500;
+    font-size: 0.92rem;
+    flex: 1;
+}
+
+/* --- Conversion Table --- */
+.conversion-table {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.conv-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.conv-row:nth-child(even) {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.conv-header {
+    background: rgba(10, 132, 255, 0.08) !important;
+    border: 1px solid rgba(10, 132, 255, 0.15);
+}
+
+.conv-header span {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.78rem;
 }

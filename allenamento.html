@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allenamento & Integratori — Marco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Page Switcher -->
+    <div class="page-switcher">
+        <a href="index.html" class="page-link">🍽️ Alimentazione</a>
+        <a href="allenamento.html" class="page-link active">🏋️ Allenamento</a>
+    </div>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-emoji">🏋️</span>
+            <h1>Piano Allenamento</h1>
+            <p class="hero-subtitle">Casa — Corpo Libero + Elastici</p>
+            <div class="hero-tags">
+                <span class="tag">Push/Pull/Legs</span>
+                <span class="tag">5x/settimana</span>
+                <span class="tag">~50 min</span>
+                <span class="tag">Budget ~20-30€</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" id="navbar">
+        <div class="nav-inner">
+            <button class="nav-btn active" data-section="struttura">📐 Struttura</button>
+            <button class="nav-btn" data-section="push-a">🔵 Push A</button>
+            <button class="nav-btn" data-section="pull-a">🔴 Pull A</button>
+            <button class="nav-btn" data-section="legs-a">🟢 Legs A</button>
+            <button class="nav-btn" data-section="push-b">🔵 Push B</button>
+            <button class="nav-btn" data-section="pull-b">🔴 Pull+Legs B</button>
+            <button class="nav-btn" data-section="progressione">📈 Progressione</button>
+            <button class="nav-btn" data-section="palestra">🔄 Palestra</button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- SEZIONE STRUTTURA -->
+        <section id="struttura" class="section active">
+            <h2 class="section-title">📐 Struttura del Piano</h2>
+
+            <!-- Attrezzatura -->
+            <div class="glass-card">
+                <h3>🛒 Attrezzatura Necessaria</h3>
+                <p class="card-hint">Costo totale: ~20-30€. Tocca ogni oggetto per i dettagli.</p>
+
+                <div class="equip-grid">
+                    <div class="equip-item" data-expandable>
+                        <div class="equip-header">
+                            <span class="equip-icon">🏋️</span>
+                            <span class="equip-name">Set bande elastiche</span>
+                            <span class="equip-cost">~15-20€</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Fondamentali. Prendi un set con 3-5 resistenze diverse, maniglie + aggancio porta. Sostituiscono praticamente tutti i macchinari della palestra.</p>
+                        </div>
+                    </div>
+                    <div class="equip-item" data-expandable>
+                        <div class="equip-header">
+                            <span class="equip-icon">🧘</span>
+                            <span class="equip-name">Tappetino</span>
+                            <span class="equip-cost">~10€</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Per esercizi a terra: plank, crunch, superman, stretching.</p>
+                        </div>
+                    </div>
+                    <div class="equip-item" data-expandable>
+                        <div class="equip-header">
+                            <span class="equip-icon">🪑</span>
+                            <span class="equip-name">Sedia robusta</span>
+                            <span class="equip-cost">Già ce l'hai</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Per dip, step-up, squat bulgari, pike push-up piedi rialzati.</p>
+                        </div>
+                    </div>
+                    <div class="equip-item" data-expandable>
+                        <div class="equip-header">
+                            <span class="equip-icon">🎒</span>
+                            <span class="equip-name">Zaino + libri/bottiglie</span>
+                            <span class="equip-cost">Già ce l'hai</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Per aggiungere peso a squat, affondi, hip thrust, push-up, dip. Costa zero ed è incredibilmente efficace.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout info">
+                    <span class="callout-icon">💪</span>
+                    <div>Con elastici + corpo libero puoi <strong>assolutamente costruire massa muscolare</strong>, specialmente da principiante/intermedio. La chiave è la progressione.</div>
+                </div>
+            </div>
+
+            <!-- Settimana -->
+            <div class="glass-card">
+                <h3>🗓️ Settimana Tipo</h3>
+                <div class="week-schedule">
+                    <div class="schedule-day">
+                        <span class="sched-day-name">LUN</span>
+                        <span class="sched-badge push">PUSH A</span>
+                        <span class="sched-muscles">Petto, spalle, tricipiti</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sched-day-name">MAR</span>
+                        <span class="sched-badge pull">PULL A</span>
+                        <span class="sched-muscles">Dorsali, trapezi, bicipiti</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sched-day-name">MER</span>
+                        <span class="sched-badge legs">LEGS A</span>
+                        <span class="sched-muscles">Quadricipiti, glutei, femorali</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sched-day-name">GIO</span>
+                        <span class="sched-badge push">PUSH B</span>
+                        <span class="sched-muscles">Spalle, petto, tricipiti</span>
+                    </div>
+                    <div class="schedule-day">
+                        <span class="sched-day-name">VEN</span>
+                        <span class="sched-badge pull">PULL B</span>
+                        <span class="sched-muscles">Dorso, bicipiti + gambe light</span>
+                    </div>
+                    <div class="schedule-day rest-day">
+                        <span class="sched-day-name">SAB</span>
+                        <span class="sched-badge rest">REST ATTIVO</span>
+                        <span class="sched-muscles">Passeggiata 30 min + stretching</span>
+                    </div>
+                    <div class="schedule-day rest-day">
+                        <span class="sched-day-name">DOM</span>
+                        <span class="sched-badge rest-full">REST</span>
+                        <span class="sched-muscles">Riposo completo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regole Generali -->
+            <div class="glass-card">
+                <h3>📏 Regole Generali</h3>
+                <div class="rules-list">
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">⏱️</span>
+                            <span class="rule-text">Tempo Sotto Tensione (TUT)</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Scendi SEMPRE in <strong>3 secondi</strong>, pausa 1 sec, sali in 1-2 sec. È la chiave per costruire muscolo senza pesi pesanti.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">⏸️</span>
+                            <span class="rule-text">Recupero tra le serie</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p><strong>60-90 secondi</strong> tra le serie. Per esercizi composti pesanti (squat, push-up) tendi verso 90". Per isolamento (curl) verso 60".</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">🔥</span>
+                            <span class="rule-text">Riscaldamento</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>5 min mobilità articolare + 1 serie leggera del primo esercizio. Non saltarlo mai.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">🧘</span>
+                            <span class="rule-text">Stretching finale</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>5-10 min, 30 sec per muscolo. Aiuta il recupero e previene infortuni.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">📈</span>
+                            <span class="rule-text">Progressione</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Ogni 1-2 settimane: <strong>aggiungi ripetizioni → variante più difficile → elastico più resistente</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timing -->
+            <div class="glass-card">
+                <h3>⏰ Timing nella tua giornata</h3>
+                <div class="timing-flow">
+                    <div class="timing-step">
+                        <span class="timing-time">17:15</span>
+                        <span class="timing-what">Riscaldamento (5 min)</span>
+                    </div>
+                    <div class="timing-arrow">→</div>
+                    <div class="timing-step">
+                        <span class="timing-time">17:20</span>
+                        <span class="timing-what">Allenamento (~45 min)</span>
+                    </div>
+                    <div class="timing-arrow">→</div>
+                    <div class="timing-step">
+                        <span class="timing-time">18:05</span>
+                        <span class="timing-what">Stretching (10 min)</span>
+                    </div>
+                    <div class="timing-arrow">→</div>
+                    <div class="timing-step">
+                        <span class="timing-time">18:15</span>
+                        <span class="timing-what">Doccia</span>
+                    </div>
+                    <div class="timing-arrow">→</div>
+                    <div class="timing-step highlight-timing">
+                        <span class="timing-time">19:00</span>
+                        <span class="timing-what">Cena (post-workout)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUSH A -->
+        <section id="push-a" class="section">
+            <h2 class="section-title">🔵 PUSH A — Petto Focus</h2>
+            <p class="section-subtitle">~50 min | Petto, spalle, tricipiti</p>
+
+            <div class="exercises-list">
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">1</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Push-up classici</span>
+                            <span class="exercise-sets">4 × 10-15</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Corpo dritto, scendi lento 3 secondi. Se troppo facili: <strong>piedi rialzati su sedia</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto</span><span class="muscle-tag">Tricipiti</span><span class="muscle-tag">Spalle ant.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">2</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Push-up larghi</span>
+                            <span class="exercise-sets">3 × 8-12</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Mani più larghe delle spalle → <strong>petto esterno</strong>. Scendi fino a sfiorare il pavimento.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto esterno</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">3</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Chest press con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico dietro la schiena, spingi avanti. Simula la panca piana. <strong>Squeeze a fine spinta 1 sec</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto</span><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">4</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Croci con elastico</span>
+                            <span class="exercise-sets">3 × 15-18</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico agganciato alla porta dietro, braccia aperte → chiudi davanti. Leggero, senti lo <strong>stretch del petto</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto interno</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">5</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Military press con elastico</span>
+                            <span class="exercise-sets">3 × 10-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Piedi sull'elastico, spingi in alto. <strong>Gomiti non oltre le orecchie</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Spalle</span><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">6</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Dip tra due sedie</span>
+                            <span class="exercise-sets">3 × 8-12</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Mani sulle sedie, piedi a terra. <strong>Busto in avanti = petto</strong>, dritto = tricipiti.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto</span><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">7</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Estensione tricipiti con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Gomiti fermi, stendi avambracci verso l'alto sopra la testa.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card finisher">
+                    <div class="exercise-header">
+                        <span class="exercise-num">🔥</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Plank</span>
+                            <span class="exercise-sets">3 × 45-60"</span>
+                        </div>
+                        <span class="exercise-rest">30"</span>
+                    </div>
+                    <p class="finisher-note">Core stabile, non inarcare la schiena</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PULL A -->
+        <section id="pull-a" class="section">
+            <h2 class="section-title">🔴 PULL A — Dorso Focus</h2>
+            <p class="section-subtitle">~50 min | Dorsali, trapezi, bicipiti</p>
+
+            <div class="callout info">
+                <span class="callout-icon">💡</span>
+                <div>Senza sbarra e senza manubri, i dorsali si allenano benissimo con elastici agganciati in alto (porta) + esercizi a corpo libero.</div>
+            </div>
+
+            <div class="exercises-list">
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">1</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Lat pulldown con elastico</span>
+                            <span class="exercise-sets">4 × 10-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico agganciato in alto alla porta, tira verso il petto da seduto/in ginocchio. Simula la <strong>lat machine</strong>. Squeeze in basso 1 sec, risali lento.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali</span><span class="muscle-tag">Bicipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">2</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Rematore con elastico</span>
+                            <span class="exercise-sets">4 × 10-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico agganciato a mezza altezza, tira verso il busto. Simula il <strong>pulley</strong>. Schiena dritta, tira con i gomiti.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali</span><span class="muscle-tag">Trapezio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">3</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Superman hold</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>A pancia in giù, braccia e gambe sollevate. <strong>Tieni la posizione 2 sec in alto</strong>. Dorsali bassi + lombari.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali bassi</span><span class="muscle-tag">Lombari</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">4</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Rematore inverso sotto il tavolo</span>
+                            <span class="exercise-sets">3 × 8-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Sdraiato sotto un tavolo robusto, tira il petto verso il piano. <strong>Il MIGLIOR esercizio per dorsali senza attrezzi.</strong> Corpo dritto come un plank rovesciato.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali</span><span class="muscle-tag star">⭐ TOP</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">5</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Curl bicipiti con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Piedi sull'elastico, curl in piedi. Supinazione in salita.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Bicipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">6</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Curl a martello con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Polsi neutri → brachiale + avambraccio.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Brachiale</span><span class="muscle-tag">Avambraccio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">7</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Croci inverse con elastico</span>
+                            <span class="exercise-sets">3 × 15-18</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico davanti, braccia aperte dietro. Deltoide posteriore + trapezio medio.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Deltoide post.</span><span class="muscle-tag">Trapezio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card finisher">
+                    <div class="exercise-header">
+                        <span class="exercise-num">🔥</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Plank laterale</span>
+                            <span class="exercise-sets">3 × 30" per lato</span>
+                        </div>
+                        <span class="exercise-rest">30"</span>
+                    </div>
+                    <p class="finisher-note">Core laterale</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEGS A -->
+        <section id="legs-a" class="section">
+            <h2 class="section-title">🟢 LEGS A — Gambe Completo</h2>
+            <p class="section-subtitle">~50 min | Quadricipiti, glutei, femorali, polpacci</p>
+
+            <div class="callout info">
+                <span class="callout-icon">🦵</span>
+                <div>Le gambe rispondono benissimo al corpo libero. <strong>Lo zaino con libri/bottiglie</strong> aggiunge peso efficacemente.</div>
+            </div>
+
+            <div class="exercises-list">
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">1</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Squat a corpo libero</span>
+                            <span class="exercise-sets">4 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>O con zaino zavorrato. Scendi sotto il parallelo. <strong>Lento: 3 sec giù, 1 sec su</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Quadricipiti</span><span class="muscle-tag">Glutei</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">2</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Squat bulgaro</span>
+                            <span class="exercise-sets">3 × 10-12/gamba</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Piede dietro su sedia. <strong>Killer.</strong> Se troppo facile: zaino zavorrato.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Quadricipiti</span><span class="muscle-tag">Glutei</span><span class="muscle-tag star">⭐ KILLER</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">3</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Affondi camminando</span>
+                            <span class="exercise-sets">3 × 12/gamba</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p><strong>Passo lungo = glutei</strong>, passo corto = quadricipiti.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Glutei</span><span class="muscle-tag">Quadricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">4</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Stacco rumeno a una gamba</span>
+                            <span class="exercise-sets">3 × 10/gamba</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Corpo libero o con elastico. <strong>Equilibrio + femorali</strong>. Schiena dritta.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Femorali</span><span class="muscle-tag">Equilibrio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">5</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Hip Thrust</span>
+                            <span class="exercise-sets">4 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Schiena sulla sedia, zaino sul bacino. <strong>Squeeze in alto 2 sec.</strong></p>
+                            <div class="muscle-tags"><span class="muscle-tag">Glutei</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">6</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Squat con elastico</span>
+                            <span class="exercise-sets">3 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico sulle cosce. <strong>Spingi ginocchia fuori.</strong> Glutei laterali (medio gluteo).</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Gluteo medio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">7</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Calf raises su gradino</span>
+                            <span class="exercise-sets">4 × 20-25</span>
+                        </div>
+                        <span class="exercise-rest">45"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Scendi lento per lo stretch. Con zaino se facile.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Polpacci</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card finisher">
+                    <div class="exercise-header">
+                        <span class="exercise-num">🔥</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Crunch</span>
+                            <span class="exercise-sets">3 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">30"</span>
+                    </div>
+                    <p class="finisher-note">Addominali</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PUSH B -->
+        <section id="push-b" class="section">
+            <h2 class="section-title">🔵 PUSH B — Spalle Focus</h2>
+            <p class="section-subtitle">~50 min | Spalle, petto, tricipiti</p>
+
+            <div class="exercises-list">
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">1</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Military press con elastico</span>
+                            <span class="exercise-sets">4 × 10-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Peso principale della giornata. Focus sulle spalle.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Spalle</span><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">2</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Pike push-up</span>
+                            <span class="exercise-sets">3 × 8-10</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Flessioni a V invertita, piedi rialzati su sedia. <strong>Il push-up per le spalle.</strong> Deltoidi anteriori.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Deltoidi ant.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">3</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Alzate laterali con elastico</span>
+                            <span class="exercise-sets">4 × 15-18</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Piedi sull'elastico, braccia ai lati. <strong>Leggero e controllato</strong>. Deltoidi laterali.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Deltoidi lat.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">4</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Alzate frontali con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Alternate. Deltoide anteriore.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Deltoide ant.</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">5</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Push-up classici</span>
+                            <span class="exercise-sets">3 × max (cedimento)</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Volume extra per il petto. Vai fino al cedimento.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Petto</span><span class="muscle-tag">Volume</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">6</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Push-up diamante</span>
+                            <span class="exercise-sets">3 × 8-12</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Mani vicine a diamante. <strong>Tricipiti focus.</strong> Se troppo difficile: sulle ginocchia.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">7</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Estensione tricipiti (pushdown)</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico in alto, spingi verso il basso. Simula il pushdown ai cavi.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Tricipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card finisher">
+                    <div class="exercise-header">
+                        <span class="exercise-num">🔥</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Plank</span>
+                            <span class="exercise-sets">3 × 45-60"</span>
+                        </div>
+                        <span class="exercise-rest">30"</span>
+                    </div>
+                    <p class="finisher-note">Core</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PULL B + LEGS B -->
+        <section id="pull-b" class="section">
+            <h2 class="section-title">🔴 PULL B + 🟢 LEGS B Light</h2>
+            <p class="section-subtitle">~55 min | Dorso, bicipiti + gambe leggere</p>
+
+            <div class="exercises-list">
+                <div class="workout-divider">
+                    <span>🔴 PULL B</span>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">1</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Lat pulldown con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Usa <strong>resistenza diversa dal Pull A</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">2</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Rematore inverso sotto il tavolo</span>
+                            <span class="exercise-sets">3 × 8-12</span>
+                        </div>
+                        <span class="exercise-rest">75"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Fondamentale per dorsali. Corpo dritto.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Dorsali</span><span class="muscle-tag star">⭐ TOP</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">3</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Curl bicipiti con elastico</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Bicipiti classico. Supinazione in salita.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Bicipiti</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">4</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Face pull con elastico</span>
+                            <span class="exercise-sets">3 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Elastico a mezza altezza, tira verso il viso con gomiti alti. <strong>Salute spalle + postura + deltoide posteriore</strong>.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Deltoide post.</span><span class="muscle-tag">Postura</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workout-divider">
+                    <span>🟢 LEGS B (Light)</span>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">5</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Squat a corpo libero</span>
+                            <span class="exercise-sets">3 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Senza zaino — più leggero del Legs A.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Quadricipiti</span><span class="muscle-tag">Glutei</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">6</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Hip Thrust su sedia</span>
+                            <span class="exercise-sets">3 × 15-20</span>
+                        </div>
+                        <span class="exercise-rest">60"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Glutei. Squeeze in alto.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Glutei</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card" data-expandable>
+                    <div class="exercise-header">
+                        <span class="exercise-num">7</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">Calf raises</span>
+                            <span class="exercise-sets">3 × 20-25</span>
+                        </div>
+                        <span class="exercise-rest">45"</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="exercise-note">
+                            <p>Polpacci. Scendi lento.</p>
+                            <div class="muscle-tags"><span class="muscle-tag">Polpacci</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-card glass-card finisher">
+                    <div class="exercise-header">
+                        <span class="exercise-num">🔥</span>
+                        <div class="exercise-info">
+                            <span class="exercise-name">V-Crunch</span>
+                            <span class="exercise-sets">3 × 12-15</span>
+                        </div>
+                        <span class="exercise-rest">30"</span>
+                    </div>
+                    <p class="finisher-note">Addominali</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESSIONE -->
+        <section id="progressione" class="section">
+            <h2 class="section-title">📈 Come Progredire</h2>
+
+            <div class="glass-card">
+                <h3>La Scala della Progressione</h3>
+                <p class="card-hint">Segui quest'ordine — tocca ogni step per i dettagli</p>
+
+                <div class="progression-steps">
+                    <div class="prog-step" data-expandable>
+                        <div class="prog-header">
+                            <span class="prog-num">1</span>
+                            <span class="prog-title">Più ripetizioni</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Se fai 10 push-up → punta a 15, poi 20. Quando arrivi al massimo della fascia di ripetizioni dell'esercizio, passa allo step 2.</p>
+                        </div>
+                    </div>
+                    <div class="prog-step" data-expandable>
+                        <div class="prog-header">
+                            <span class="prog-num">2</span>
+                            <span class="prog-title">Più tempo sotto tensione</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Rallenta la discesa a <strong>4-5 secondi</strong>. Aggiungi pause isometriche (es. fermo a metà per 2 secondi). Questo è BRUTALE a corpo libero.</p>
+                        </div>
+                    </div>
+                    <div class="prog-step" data-expandable>
+                        <div class="prog-header">
+                            <span class="prog-num">3</span>
+                            <span class="prog-title">Variante più difficile</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="progression-table">
+                                <div class="prog-row prog-row-header">
+                                    <span>Base</span>
+                                    <span>Intermedio</span>
+                                    <span>Avanzato</span>
+                                </div>
+                                <div class="prog-row">
+                                    <span>Push-up ginocchia</span>
+                                    <span>Push-up classici</span>
+                                    <span>Piedi rialzati / Archer</span>
+                                </div>
+                                <div class="prog-row">
+                                    <span>Squat</span>
+                                    <span>Squat + zaino</span>
+                                    <span>Pistol squat</span>
+                                </div>
+                                <div class="prog-row">
+                                    <span>Pike push-up</span>
+                                    <span>Pike piedi su sedia</span>
+                                    <span>Handstand al muro</span>
+                                </div>
+                                <div class="prog-row">
+                                    <span>Dip piedi a terra</span>
+                                    <span>Dip gambe tese</span>
+                                    <span>Dip con zaino</span>
+                                </div>
+                                <div class="prog-row">
+                                    <span>Rematore gambe piegate</span>
+                                    <span>Rematore gambe tese</span>
+                                    <span>Rematore piedi rialzati</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prog-step" data-expandable>
+                        <div class="prog-header">
+                            <span class="prog-num">4</span>
+                            <span class="prog-title">Elastico più resistente</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Quando l'elastico attuale è troppo facile per le ripetizioni target → passa alla banda successiva.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>⚡ Trucchi per Più Massa</h3>
+                <div class="tricks-list">
+                    <div class="trick-item" data-expandable>
+                        <div class="trick-header">
+                            <span class="trick-icon">🎒</span>
+                            <span class="trick-name">Zaino zavorrato</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Riempilo con bottiglie d'acqua piene, libri pesanti → squat, affondi, hip thrust, push-up, dip. <strong>Costa zero.</strong></p>
+                        </div>
+                    </div>
+                    <div class="trick-item" data-expandable>
+                        <div class="trick-header">
+                            <span class="trick-icon">🔗</span>
+                            <span class="trick-name">Elastici doppi</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Sovrapponi 2 elastici per raddoppiare la resistenza.</p>
+                        </div>
+                    </div>
+                    <div class="trick-item" data-expandable>
+                        <div class="trick-header">
+                            <span class="trick-icon">⏱️</span>
+                            <span class="trick-name">Tempo 4-1-2</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>4 sec discesa, 1 sec pausa, 2 sec salita → la serie da 12 rip diventa <strong>1 minuto di tensione continua</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="trick-item" data-expandable>
+                        <div class="trick-header">
+                            <span class="trick-icon">🔻</span>
+                            <span class="trick-name">Drop set con elastici</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Serie con elastico pesante fino al cedimento → togli l'elastico → continua a corpo libero fino al cedimento.</p>
+                        </div>
+                    </div>
+                    <div class="trick-item" data-expandable>
+                        <div class="trick-header">
+                            <span class="trick-icon">🧊</span>
+                            <span class="trick-name">Serie isometriche</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Tieni la posizione più difficile (fondo del push-up, metà dello squat) per <strong>10-15 secondi a fine serie</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRANSIZIONE PALESTRA -->
+        <section id="palestra" class="section">
+            <h2 class="section-title">🔄 Quando Vai in Palestra</h2>
+
+            <div class="glass-card">
+                <p class="card-intro">Quando ti iscriverai, la struttura <strong>Push/Pull/Legs resta IDENTICA</strong>. Cambiano solo gli esercizi. La transizione sarà naturale perché i pattern di movimento sono gli stessi.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Tabella di Conversione</h3>
+                <p class="card-hint">Da casa → in palestra</p>
+
+                <div class="conversion-table">
+                    <div class="conv-row conv-header">
+                        <span>🏠 A Casa (ora)</span>
+                        <span>🏋️ In Palestra (dopo)</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Push-up / piedi rialzati</span>
+                        <span>Panca piana con bilanciere</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Chest press con elastico</span>
+                        <span>Panca con manubri</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Lat pulldown con elastico</span>
+                        <span>Lat machine</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Rematore inverso tavolo</span>
+                        <span>Rematore con bilanciere</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Rematore con elastico</span>
+                        <span>Pulley basso</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Curl con elastico</span>
+                        <span>Curl con bilanciere/manubri</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Military press con elastico</span>
+                        <span>Military press con bilanciere</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Squat con zaino</span>
+                        <span>Squat con bilanciere</span>
+                    </div>
+                    <div class="conv-row">
+                        <span>Hip thrust su sedia</span>
+                        <span>Hip thrust con bilanciere</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="callout info">
+                <span class="callout-icon">💪</span>
+                <div>Avrai già le <strong>basi motorie</strong> e potrai concentrarti solo sull'aggiungere carico. La transizione sarà naturale!</div>
+            </div>
+
+            <div class="glass-card footer-card">
+                <p>Piano allenamento v2 (corpo libero + elastici) — <strong>7 marzo 2026</strong></p>
+                <p><em>Quando ti iscriverai in palestra → adatteremo la scheda con i pesi.</em></p>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="bottom-spacer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

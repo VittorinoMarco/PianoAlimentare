@@ -57,7 +57,7 @@ function initExpandables() {
 
     expandables.forEach(item => {
         // Find the clickable header area (first child or specific header)
-        const header = item.querySelector('.macro-header, .fodmap-cat-header, .breakfast-header, .day-header, .spesa-header, .step-header, .rule-header, .phase-header, .meal-body');
+        const header = item.querySelector('.macro-header, .fodmap-cat-header, .breakfast-header, .day-header, .spesa-header, .step-header, .rule-header, .phase-header, .meal-body, .equip-header, .exercise-header, .prog-header, .trick-header');
         const detail = item.querySelector('.macro-detail');
 
         if (!header || !detail) return;
