@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piano Alimentare — Marco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body>
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-emoji">🍽️</span>
+            <h1>Piano Alimentare</h1>
+            <p class="hero-subtitle">Massa Muscolare — Marco</p>
+            <div class="hero-tags">
+                <span class="tag">Low FODMAP</span>
+                <span class="tag">Meal Prep 2x/sett</span>
+                <span class="tag">Budget Friendly</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar" id="navbar">
+        <div class="nav-inner">
+            <button class="nav-btn active" data-section="numeri">📊 Numeri</button>
+            <button class="nav-btn" data-section="pasti">🍽️ Pasti</button>
+            <button class="nav-btn" data-section="fodmap">⚠️ FODMAP</button>
+            <button class="nav-btn" data-section="menu">🗓️ Menu</button>
+            <button class="nav-btn" data-section="spesa">🛒 Spesa</button>
+            <button class="nav-btn" data-section="mealprep">👨‍🍳 Prep</button>
+            <button class="nav-btn" data-section="regole">⚡ Regole</button>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <!-- SEZIONE NUMERI -->
+        <section id="numeri" class="section active">
+            <h2 class="section-title">📊 I Tuoi Numeri</h2>
+            
+            <div class="glass-card profile-card">
+                <h3>Profilo Stimato</h3>
+                <div class="stats-grid">
+                    <div class="stat-item" data-tooltip="Base per calcolare BMR e TDEE">
+                        <span class="stat-value">167</span>
+                        <span class="stat-label">cm altezza</span>
+                    </div>
+                    <div class="stat-item" data-tooltip="Peso stimato — pesati a digiuno per confermare">
+                        <span class="stat-value">~60</span>
+                        <span class="stat-label">kg peso</span>
+                    </div>
+                    <div class="stat-item" data-tooltip="Età anagrafica">
+                        <span class="stat-value">21</span>
+                        <span class="stat-label">anni</span>
+                    </div>
+                    <div class="stat-item highlight" data-tooltip="Surplus di ~250-300 kcal per lean bulk">
+                        <span class="stat-value">2.500</span>
+                        <span class="stat-label">kcal/giorno target</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-chip">BMR: ~1.544 kcal</div>
+                    <div class="info-chip">TDEE: ~2.400 kcal</div>
+                    <div class="info-chip accent">Surplus: +250-300 kcal</div>
+                </div>
+            </div>
+
+            <div class="callout warning">
+                <span class="callout-icon">⚠️</span>
+                <div>
+                    <strong>Nota importante:</strong> Non conosco il tuo peso esatto. Se pesi di più o di meno di 60 kg, adatta le quantità. Pesati domani mattina a digiuno e condividilo — aggiusteremo i numeri.
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>Macro Giornalieri Target</h3>
+                <p class="card-hint">Tocca ogni macro per scoprire perché è impostato così</p>
+                <div class="macro-bars">
+                    <div class="macro-bar-item" data-expandable>
+                        <div class="macro-header">
+                            <div class="macro-info">
+                                <span class="macro-dot protein"></span>
+                                <span class="macro-name">Proteine</span>
+                                <span class="macro-amount">120g</span>
+                            </div>
+                            <span class="macro-kcal">480 kcal · 19%</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill protein" style="width: 19%"></div></div>
+                        <div class="macro-detail hidden">
+                            <p>🔬 <strong>2g per kg di peso corporeo</strong> — è il range ottimale per sintesi proteica e crescita muscolare (1.6-2.2g/kg raccomandati dalla letteratura scientifica).</p>
+                        </div>
+                    </div>
+                    <div class="macro-bar-item" data-expandable>
+                        <div class="macro-header">
+                            <div class="macro-info">
+                                <span class="macro-dot carbs"></span>
+                                <span class="macro-name">Carboidrati</span>
+                                <span class="macro-amount">370g</span>
+                            </div>
+                            <span class="macro-kcal">1.480 kcal · 59%</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill carbs" style="width: 59%"></div></div>
+                        <div class="macro-detail hidden">
+                            <p>⚡ <strong>Carboidrati alti (59%)</strong> — sono il carburante per gli allenamenti e per la crescita. Senza carbo sufficienti, il corpo usa le proteine come energia invece che per costruire muscolo.</p>
+                        </div>
+                    </div>
+                    <div class="macro-bar-item" data-expandable>
+                        <div class="macro-header">
+                            <div class="macro-info">
+                                <span class="macro-dot fats"></span>
+                                <span class="macro-name">Grassi</span>
+                                <span class="macro-amount">60g</span>
+                            </div>
+                            <span class="macro-kcal">540 kcal · 22%</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill fats" style="width: 22%"></div></div>
+                        <div class="macro-detail hidden">
+                            <p>🧈 <strong>Grassi moderati (22%)</strong> — necessari per testosterone e assorbimento vitamine liposolubili, ma non servono in eccesso per il tuo obiettivo.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-bar">
+                    <span>TOTALE</span>
+                    <span class="total-kcal">~2.500 kcal</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE DISTRIBUZIONE PASTI -->
+        <section id="pasti" class="section">
+            <h2 class="section-title">🍽️ Distribuzione Pasti</h2>
+
+            <div class="meals-timeline">
+                <div class="meal-card glass-card" data-expandable>
+                    <div class="meal-time">8:10</div>
+                    <div class="meal-body">
+                        <h4>Colazione <span class="meal-kcal">~500 kcal</span></h4>
+                        <div class="meal-macros-mini">
+                            <span class="mm protein">P: 25g</span>
+                            <span class="mm carbs">C: 75g</span>
+                            <span class="mm fats">F: 12g</span>
+                        </div>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <p>Primo pasto della giornata. Scegli tra opzioni dolci o salate (vedi sezione Menu). Bevi 500ml acqua appena sveglio prima di mangiare.</p>
+                    </div>
+                </div>
+                <div class="meal-card glass-card" data-expandable>
+                    <div class="meal-time">10:45</div>
+                    <div class="meal-body">
+                        <h4>Spuntino Mattina <span class="meal-kcal">~250 kcal</span></h4>
+                        <div class="meal-macros-mini">
+                            <span class="mm protein">P: 12g</span>
+                            <span class="mm carbs">C: 35g</span>
+                            <span class="mm fats">F: 6g</span>
+                        </div>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <p>Spuntino veloce: banana + mandorle, fette biscottate + burro di arachidi, o arancia + noci miste.</p>
+                    </div>
+                </div>
+                <div class="meal-card glass-card" data-expandable>
+                    <div class="meal-time">13:00</div>
+                    <div class="meal-body">
+                        <h4>Pranzo <span class="meal-kcal">~750 kcal</span></h4>
+                        <div class="meal-macros-mini">
+                            <span class="mm protein">P: 35g</span>
+                            <span class="mm carbs">C: 110g</span>
+                            <span class="mm fats">F: 18g</span>
+                        </div>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <p>Pasto principale dal meal prep. Apri il contenitore del giorno, scaldi al microonde 2.5 min e mangi!</p>
+                    </div>
+                </div>
+                <div class="meal-card glass-card" data-expandable>
+                    <div class="meal-time">16:00</div>
+                    <div class="meal-body">
+                        <h4>Spuntino Pomeriggio <span class="meal-kcal">~250 kcal</span></h4>
+                        <div class="meal-macros-mini">
+                            <span class="mm protein">P: 12g</span>
+                            <span class="mm carbs">C: 35g</span>
+                            <span class="mm fats">F: 6g</span>
+                        </div>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <p>Yogurt greco + kiwi, banana + noci, oppure gallette di riso + bresaola.</p>
+                    </div>
+                </div>
+                <div class="meal-card glass-card" data-expandable>
+                    <div class="meal-time">19:00</div>
+                    <div class="meal-body">
+                        <h4>Cena <span class="meal-kcal">~750 kcal</span></h4>
+                        <div class="meal-macros-mini">
+                            <span class="mm protein">P: 36g</span>
+                            <span class="mm carbs">C: 110g</span>
+                            <span class="mm fats">F: 18g</span>
+                        </div>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <p>Secondo pasto principale dal meal prep. Contenitore del giorno + eventuale proteina fresca (pesce/uova) la sera stessa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card hydration-card">
+                <h3>💧 Idratazione</h3>
+                <ul class="clean-list">
+                    <li>1 bicchiere d'acqua <strong>PRIMA</strong> di ogni pasto</li>
+                    <li>Non bere troppo <strong>DURANTE</strong> il pasto</li>
+                    <li>Target giornaliero: <strong>2-2.5L</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEZIONE FODMAP -->
+        <section id="fodmap" class="section">
+            <h2 class="section-title">⚠️ Regole FODMAP</h2>
+
+            <div class="glass-card">
+                <p class="card-intro">I FODMAP ti danno "un minimo fastidio" — non serve una dieta rigida. Bastano queste regole semplici.</p>
+            </div>
+
+            <div class="glass-card fodmap-safe">
+                <h3>✅ Cibi SICURI — usa liberamente</h3>
+                <p class="card-hint">Tocca ogni categoria per espandere</p>
+                
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥩 Proteine</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Pollo</span>
+                            <span class="food-chip">Tacchino</span>
+                            <span class="food-chip">Manzo</span>
+                            <span class="food-chip">Maiale</span>
+                            <span class="food-chip">Uova</span>
+                            <span class="food-chip">Tonno</span>
+                            <span class="food-chip">Salmone</span>
+                            <span class="food-chip">Merluzzo</span>
+                            <span class="food-chip">Orata</span>
+                            <span class="food-chip">Gamberi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🌾 Cereali</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Riso bianco</span>
+                            <span class="food-chip">Riso integrale</span>
+                            <span class="food-chip">Pasta senza glutine</span>
+                            <span class="food-chip">Pasta di riso</span>
+                            <span class="food-chip">Avena (piccole qtà)</span>
+                            <span class="food-chip">Polenta</span>
+                            <span class="food-chip">Patate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥬 Verdure</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Zucchine</span>
+                            <span class="food-chip">Carote</span>
+                            <span class="food-chip">Spinaci</span>
+                            <span class="food-chip">Lattuga</span>
+                            <span class="food-chip">Pomodori</span>
+                            <span class="food-chip">Peperoni</span>
+                            <span class="food-chip">Melanzane</span>
+                            <span class="food-chip">Cetrioli</span>
+                            <span class="food-chip">Mais</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🍌 Frutta</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Banane</span>
+                            <span class="food-chip">Arance</span>
+                            <span class="food-chip">Kiwi</span>
+                            <span class="food-chip">Uva</span>
+                            <span class="food-chip">Fragole</span>
+                            <span class="food-chip">Mirtilli</span>
+                            <span class="food-chip">Mandarini</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥛 Latticini</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Latte senza lattosio</span>
+                            <span class="food-chip">Yogurt senza lattosio</span>
+                            <span class="food-chip">Parmigiano</span>
+                            <span class="food-chip">Grana Padano</span>
+                            <span class="food-chip">Mozzarella s.l.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥜 Frutta secca</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Mandorle (max 10)</span>
+                            <span class="food-chip">Noci</span>
+                            <span class="food-chip">Semi di girasole</span>
+                            <span class="food-chip">Semi di zucca</span>
+                            <span class="food-chip">Burro di arachidi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🫒 Condimenti</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips">
+                            <span class="food-chip">Olio d'oliva</span>
+                            <span class="food-chip">Erbe</span>
+                            <span class="food-chip">Spezie</span>
+                            <span class="food-chip">Salsa di soia</span>
+                            <span class="food-chip">Aceto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card fodmap-avoid">
+                <h3>🚫 Cibi da LIMITARE/EVITARE</h3>
+                <p class="card-hint">Tocca ogni categoria per espandere</p>
+
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥬 Verdure</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips danger">
+                            <span class="food-chip">Aglio ⚠️</span>
+                            <span class="food-chip">Cipolla ⚠️</span>
+                            <span class="food-chip">Asparagi</span>
+                            <span class="food-chip">Carciofi</span>
+                            <span class="food-chip">Cavolfiori</span>
+                            <span class="food-chip">Funghi</span>
+                            <span class="food-chip">Broccoli (grandi qtà)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🍎 Frutta</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips danger">
+                            <span class="food-chip">Mele</span>
+                            <span class="food-chip">Pere</span>
+                            <span class="food-chip">Anguria</span>
+                            <span class="food-chip">Pesche</span>
+                            <span class="food-chip">Ciliegie</span>
+                            <span class="food-chip">Frutta essiccata</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🥛 Latticini</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips danger">
+                            <span class="food-chip">Latte normale</span>
+                            <span class="food-chip">Yogurt normale</span>
+                            <span class="food-chip">Formaggi molli freschi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fodmap-category" data-expandable>
+                    <div class="fodmap-cat-header">
+                        <span>🫘 Legumi & Altro</span>
+                        <span class="expand-icon">﹀</span>
+                    </div>
+                    <div class="macro-detail hidden">
+                        <div class="food-chips danger">
+                            <span class="food-chip">Ceci (grandi qtà)</span>
+                            <span class="food-chip">Fagioli</span>
+                            <span class="food-chip">Lenticchie</span>
+                            <span class="food-chip">Miele in eccesso</span>
+                            <span class="food-chip">Sorbitolo</span>
+                            <span class="food-chip">Mannitolo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card tip-card">
+                <h3>💡 Trucchi Pratici</h3>
+                <ul class="clean-list">
+                    <li><strong>Al posto di aglio e cipolla:</strong> usa erba cipollina, parte verde del cipollotto, zenzero, peperoncino.</li>
+                    <li><strong>Sapore dell'aglio:</strong> olio infuso all'aglio (l'olio non assorbe i FODMAP).</li>
+                    <li><strong>Pasta:</strong> la pasta di grano duro in porzioni normali (fino a 150-180g cotta) è generalmente tollerata. Se noti fastidio, passa a pasta di riso.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEZIONE MENU SETTIMANALE -->
+        <section id="menu" class="section">
+            <h2 class="section-title">🗓️ Menu Settimanale</h2>
+
+            <div class="glass-card">
+                <h3>Come Funziona il Meal Prep</h3>
+                <div class="prep-schedule">
+                    <div class="prep-day">
+                        <span class="prep-when">DOM pomeriggio</span>
+                        <span class="prep-time">~2h</span>
+                        <span class="prep-what">Pranzi e cene per Lun-Mer</span>
+                    </div>
+                    <div class="prep-day">
+                        <span class="prep-when">MER sera</span>
+                        <span class="prep-time">~1.5h</span>
+                        <span class="prep-what">Pranzi e cene per Gio-Sab</span>
+                    </div>
+                    <div class="prep-day flex-day">
+                        <span class="prep-when">DOMENICA</span>
+                        <span class="prep-time">🔵 FLEX</span>
+                        <span class="prep-what">Cucini fresco o mangi fuori</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colazioni -->
+            <div class="glass-card">
+                <h3>🔵 Colazioni <span class="subtitle-note">5-10 min al momento</span></h3>
+                <p class="card-hint">Hai poca voglia la mattina — ecco opzioni veloci. Tocca per i dettagli.</p>
+
+                <div class="breakfast-grid">
+                    <div class="breakfast-option" data-expandable>
+                        <div class="breakfast-header">
+                            <span class="breakfast-letter">A</span>
+                            <span class="breakfast-name">Toast Proteico</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>2 fette pane (senza glutine o di riso) + 2 uova strapazzate + 1 banana + 10g olio d'oliva</p>
+                            <div class="meal-macros-mini">
+                                <span class="mm">~500 kcal</span>
+                                <span class="mm protein">P:25g</span>
+                                <span class="mm carbs">C:60g</span>
+                                <span class="mm fats">F:15g</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breakfast-option" data-expandable>
+                        <div class="breakfast-header">
+                            <span class="breakfast-letter">B</span>
+                            <span class="breakfast-name">Porridge Express</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>80g fiocchi d'avena + 200ml latte senza lattosio + 1 banana a fette + 15g burro di arachidi + 10g miele</p>
+                            <div class="meal-macros-mini">
+                                <span class="mm">~520 kcal</span>
+                                <span class="mm protein">P:20g</span>
+                                <span class="mm carbs">C:75g</span>
+                                <span class="mm fats">F:14g</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breakfast-option" data-expandable>
+                        <div class="breakfast-header">
+                            <span class="breakfast-letter">C</span>
+                            <span class="breakfast-name">Pancake Veloci</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>160ml albumi + 50g farina d'avena → padella antiaderente. Condisci con banana + miele/marmellata</p>
+                            <div class="meal-macros-mini">
+                                <span class="mm">~450 kcal</span>
+                                <span class="mm protein">P:28g</span>
+                                <span class="mm carbs">C:65g</span>
+                                <span class="mm fats">F:5g</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breakfast-option" data-expandable>
+                        <div class="breakfast-header">
+                            <span class="breakfast-letter">D</span>
+                            <span class="breakfast-name">Fette + Affettato</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>3 fette biscottate grandi + 60g bresaola o fesa di tacchino + 1 frutto + 10g olio d'oliva</p>
+                            <div class="meal-macros-mini">
+                                <span class="mm">~480 kcal</span>
+                                <span class="mm protein">P:30g</span>
+                                <span class="mm carbs">C:55g</span>
+                                <span class="mm fats">F:12g</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="breakfast-option" data-expandable>
+                        <div class="breakfast-header">
+                            <span class="breakfast-letter">E</span>
+                            <span class="breakfast-name">Yogurt Bowl</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>200g yogurt greco senza lattosio + 40g fiocchi d'avena + 1 banana + 10g mandorle</p>
+                            <div class="meal-macros-mini">
+                                <span class="mm">~500 kcal</span>
+                                <span class="mm protein">P:28g</span>
+                                <span class="mm carbs">C:65g</span>
+                                <span class="mm fats">F:12g</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout info">
+                    <span class="callout-icon">💧</span>
+                    <div>Bevi <strong>500ml acqua</strong> appena sveglio, prima della colazione.</div>
+                </div>
+            </div>
+
+            <!-- Spuntini -->
+            <div class="glass-card">
+                <h3>🟡 Spuntini</h3>
+                <div class="snack-section">
+                    <h4>Mattina (10:45)</h4>
+                    <div class="snack-options">
+                        <div class="snack-chip">🍌 1 banana + 20g mandorle</div>
+                        <div class="snack-chip">🍞 2 fette biscottate + 20g burro di arachidi</div>
+                        <div class="snack-chip">🍊 1 arancia + 30g noci miste</div>
+                    </div>
+                </div>
+                <div class="snack-section">
+                    <h4>Pomeriggio (16:00)</h4>
+                    <div class="snack-options">
+                        <div class="snack-chip">🥣 200g yogurt greco s.l. + 1 kiwi</div>
+                        <div class="snack-chip">🍌 1 banana + 20g noci</div>
+                        <div class="snack-chip">🍘 2 gallette di riso + 30g bresaola</div>
+                    </div>
+                </div>
+                <p class="target-note">Target per ogni spuntino: ~250 kcal · P:10-15g · C:30-40g · F:5-10g</p>
+            </div>
+
+            <!-- Pranzi e Cene -->
+            <div class="glass-card">
+                <h3>🔴 Pranzi & Cene</h3>
+                <p class="card-hint">Tocca ogni giorno per vedere i dettagli</p>
+                
+                <div class="week-days">
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Lunedì</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Riso basmati (100g crudo) + petto di pollo a dadini (180g) + zucchine trifolate + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>Pasta di riso (100g) al pomodoro + tonno al naturale (160g sgocciolato) + insalata di spinaci e carote + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Martedì</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Riso basmati (100g) + fettine di tacchino (180g) + peperoni grigliati + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>Patate al forno (250g) + orata/merluzzo al forno (200g) + zucchine grigliate + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Mercoledì</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Pasta (100g) con ragù di manzo magro (150g macinato) + pomodoro + carote + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>3 uova (frittata con spinaci e parmigiano) + riso basmati (80g) + insalata mista + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Giovedì</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Riso basmati (100g) + salmone al forno (180g) + carote e zucchine + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>Pasta di riso (100g) + petto di pollo grigliato (180g) + pomodorini + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Venerdì</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Pasta (100g) + tonno al naturale (160g) + pomodoro + olive + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>Patate al forno (250g) + fettine di manzo (180g) + spinaci saltati + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card" data-expandable>
+                        <div class="day-header">
+                            <span class="day-name">Sabato</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="day-meals">
+                                <div class="day-meal">
+                                    <span class="meal-label">🍽️ Pranzo</span>
+                                    <p>Riso basmati (100g) + petto di tacchino (180g) + melanzane grigliate + 10g olio evo</p>
+                                </div>
+                                <div class="day-meal">
+                                    <span class="meal-label">🌙 Cena</span>
+                                    <p>Pasta (100g) + 3 uova strapazzate + pomodoro + parmigiano (20g) + 10g olio evo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card flex-card">
+                        <div class="day-header">
+                            <span class="day-name">Domenica 🔵</span>
+                        </div>
+                        <p class="flex-text">FLEX — cucini fresco, pizza o quello che vuoi!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEZIONE SPESA -->
+        <section id="spesa" class="section">
+            <h2 class="section-title">🛒 Lista della Spesa</h2>
+
+            <div class="glass-card total-budget">
+                <div class="budget-display">
+                    <span class="budget-label">Budget Settimanale</span>
+                    <span class="budget-amount">~55-65€</span>
+                </div>
+                <div class="budget-monthly">~220-260€/mese</div>
+            </div>
+
+            <div class="glass-card spesa-card" data-expandable>
+                <div class="spesa-header">
+                    <span>🥩 Proteine</span>
+                    <span class="spesa-cost">~25-30€</span>
+                    <span class="expand-icon">﹀</span>
+                </div>
+                <div class="macro-detail hidden">
+                    <table class="spesa-table">
+                        <tr><td>Petto di pollo</td><td>800g</td><td>~5€</td></tr>
+                        <tr><td>Fettine di tacchino</td><td>500g</td><td>~4€</td></tr>
+                        <tr><td>Manzo macinato magro</td><td>300g</td><td>~4€</td></tr>
+                        <tr><td>Fettine di manzo</td><td>200g</td><td>~3€</td></tr>
+                        <tr><td>Salmone</td><td>200g</td><td>~4€</td></tr>
+                        <tr><td>Orata o merluzzo</td><td>200g</td><td>~3€</td></tr>
+                        <tr><td>Tonno al naturale (lattine)</td><td>4 lattine</td><td>~4€</td></tr>
+                        <tr><td>Uova</td><td>18 uova</td><td>~4€</td></tr>
+                        <tr><td>Bresaola/fesa tacchino</td><td>150g</td><td>~3€</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="glass-card spesa-card" data-expandable>
+                <div class="spesa-header">
+                    <span>🌾 Carboidrati</span>
+                    <span class="spesa-cost">~8-10€</span>
+                    <span class="expand-icon">﹀</span>
+                </div>
+                <div class="macro-detail hidden">
+                    <table class="spesa-table">
+                        <tr><td>Riso basmati</td><td>1 kg</td><td>~2€</td></tr>
+                        <tr><td>Pasta (o pasta di riso)</td><td>500g</td><td>~1.50€</td></tr>
+                        <tr><td>Fiocchi d'avena</td><td>500g</td><td>~1.50€</td></tr>
+                        <tr><td>Patate</td><td>1 kg</td><td>~1.50€</td></tr>
+                        <tr><td>Pane/fette biscottate</td><td>1 pacco</td><td>~1.50€</td></tr>
+                        <tr><td>Gallette di riso</td><td>1 pacco</td><td>~1.50€</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="glass-card spesa-card" data-expandable>
+                <div class="spesa-header">
+                    <span>🥬 Verdure</span>
+                    <span class="spesa-cost">~8-10€</span>
+                    <span class="expand-icon">﹀</span>
+                </div>
+                <div class="macro-detail hidden">
+                    <table class="spesa-table">
+                        <tr><td>Zucchine</td><td>1 kg</td><td>~2€</td></tr>
+                        <tr><td>Carote</td><td>500g</td><td>~1€</td></tr>
+                        <tr><td>Spinaci</td><td>500g</td><td>~2€</td></tr>
+                        <tr><td>Peperoni</td><td>500g</td><td>~2€</td></tr>
+                        <tr><td>Pomodorini/passata</td><td>500g + 1 bott.</td><td>~2€</td></tr>
+                        <tr><td>Melanzane</td><td>500g</td><td>~1.50€</td></tr>
+                        <tr><td>Insalata mista</td><td>2 buste</td><td>~2€</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="glass-card spesa-card" data-expandable>
+                <div class="spesa-header">
+                    <span>🍌 Frutta</span>
+                    <span class="spesa-cost">~5-6€</span>
+                    <span class="expand-icon">﹀</span>
+                </div>
+                <div class="macro-detail hidden">
+                    <table class="spesa-table">
+                        <tr><td>Banane</td><td>1 casco (7-8)</td><td>~1.50€</td></tr>
+                        <tr><td>Arance o mandarini</td><td>1 kg</td><td>~2€</td></tr>
+                        <tr><td>Kiwi</td><td>4-5</td><td>~1.50€</td></tr>
+                        <tr><td>Frutta di stagione</td><td>—</td><td>~1.50€</td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="glass-card spesa-card" data-expandable>
+                <div class="spesa-header">
+                    <span>🥛 Latticini & Altro</span>
+                    <span class="spesa-cost">~8-10€</span>
+                    <span class="expand-icon">﹀</span>
+                </div>
+                <div class="macro-detail hidden">
+                    <table class="spesa-table">
+                        <tr><td>Latte senza lattosio</td><td>1L</td><td>~1.50€</td></tr>
+                        <tr><td>Yogurt greco s.l.</td><td>4 vasetti</td><td>~3€</td></tr>
+                        <tr><td>Parmigiano/Grana</td><td>100g</td><td>~2€</td></tr>
+                        <tr><td>Burro di arachidi</td><td>1 barattolo</td><td>~1€/sett</td></tr>
+                        <tr><td>Mandorle/noci miste</td><td>200g</td><td>~2.50€</td></tr>
+                        <tr><td>Olio extra vergine</td><td>—</td><td>~1€/sett</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Conservazione -->
+            <div class="glass-card tip-card">
+                <h3>🧊 Conservazione</h3>
+                <ul class="clean-list">
+                    <li>Pasti cotti in frigo: sicuri per <strong>3-4 giorni</strong> in contenitori ermetici</li>
+                    <li>Riso cotto: consumare entro <strong>2 giorni</strong> o congelare</li>
+                    <li>Carne cotta: <strong>3-4 giorni</strong> in frigo</li>
+                    <li>Prep mercoledì → sabato = max 3 giorni → tutto sicuro</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SEZIONE MEAL PREP -->
+        <section id="mealprep" class="section">
+            <h2 class="section-title">👨‍🍳 Guida Meal Prep</h2>
+
+            <div class="glass-card">
+                <h3>Domenica Pomeriggio <span class="subtitle-note">~2 ore — Prep Lun-Mar-Mer</span></h3>
+                
+                <div class="prep-steps">
+                    <div class="prep-step" data-expandable>
+                        <div class="step-header">
+                            <span class="step-number">1</span>
+                            <span class="step-title">Cuoci i cereali</span>
+                            <span class="step-time">20 min</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ul class="step-list">
+                                <li>Pentola 1: <strong>300g riso basmati</strong> (per 3 pranzi)</li>
+                                <li>Pentola 2: acqua per la pasta (cuocerai 100g per il pranzo di mercoledì)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prep-step" data-expandable>
+                        <div class="step-header">
+                            <span class="step-number">2</span>
+                            <span class="step-title">Prepara le proteine</span>
+                            <span class="step-time">30 min</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ul class="step-list">
+                                <li>Teglia forno: <strong>petto di pollo a dadini (180g) + fettine di tacchino (180g)</strong> con olio, sale, pepe, erbe → 200°C per 20-25 min</li>
+                                <li>Padella: <strong>ragù di manzo</strong> (150g macinato + passata + carote grattugiate, NO cipolla — usa erba cipollina)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prep-step" data-expandable>
+                        <div class="step-header">
+                            <span class="step-number">3</span>
+                            <span class="step-title">Prepara le verdure</span>
+                            <span class="step-time">20 min</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ul class="step-list">
+                                <li>Teglia forno (insieme alle proteine): <strong>zucchine a rondelle + peperoni</strong> a listarelle → olio, sale</li>
+                                <li>Padella: <strong>spinaci saltati</strong> con olio</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prep-step" data-expandable>
+                        <div class="step-header">
+                            <span class="step-number">4</span>
+                            <span class="step-title">Assembla i contenitori</span>
+                            <span class="step-time">15 min</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <div class="container-list">
+                                <div class="container-item">📦 <strong>LUN pranzo:</strong> riso + pollo + zucchine</div>
+                                <div class="container-item">📦 <strong>MAR pranzo:</strong> riso + tacchino + peperoni</div>
+                                <div class="container-item">📦 <strong>MER pranzo:</strong> pasta + ragù di manzo</div>
+                                <div class="container-item">📦 <strong>LUN cena:</strong> pasta di riso + tonno (aggiungi tonno e pomodoro quando scaldi)</div>
+                                <div class="container-item">📦 <strong>MAR cena:</strong> patate al forno + pesce (cuocilo fresco martedì sera, 15 min al forno)</div>
+                                <div class="container-item">📦 <strong>MER cena:</strong> riso + frittata (fai la frittata mercoledì sera fresca, 10 min)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout info">
+                    <span class="callout-icon">💡</span>
+                    <div>Pesce e uova hanno conservazione più breve. Per le cene di martedì e mercoledì, fai la proteina fresca la sera stessa (max 15 min).</div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>Mercoledì Sera <span class="subtitle-note">~1.5 ore — Prep Gio-Ven-Sab</span></h3>
+                <p>Stessa logica della domenica:</p>
+                <ul class="clean-list">
+                    <li>Cuoci <strong>300g riso + 200g pasta</strong></li>
+                    <li>Forno: <strong>salmone (180g) + pollo (180g) + manzo (180g)</strong> — tutto insieme su una teglia grande</li>
+                    <li>Verdure: carote, zucchine, melanzane, pomodorini → forno o padella</li>
+                    <li>Taglia <strong>patate → forno</strong> (per venerdì cena)</li>
+                    <li>Assembla in <strong>6 contenitori</strong></li>
+                </ul>
+            </div>
+
+            <div class="glass-card label-card">
+                <h3>🏷️ Etichettatura Contenitori</h3>
+                <p>Segna su ogni contenitore con un post-it:</p>
+                <div class="label-example">
+                    <div class="label-fake">
+                        <span class="label-day">📦 MAR PRANZO</span>
+                        <span class="label-content">Riso + Tacchino + Peperoni</span>
+                        <span class="label-instruction">→ Microonde 2.5 min</span>
+                    </div>
+                </div>
+                <p class="card-hint">Apri il frigo, prendi il contenitore del giorno, scaldi e mangi. Zero pensieri.</p>
+            </div>
+        </section>
+
+        <!-- SEZIONE REGOLE -->
+        <section id="regole" class="section">
+            <h2 class="section-title">⚡ Regole & Monitoraggio</h2>
+
+            <div class="glass-card">
+                <h3>⚡ Regole Rapide</h3>
+                <div class="rules-list">
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">1</span>
+                            <span class="rule-text">Mangia 5 volte al giorno</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Non saltare i pasti, specialmente colazione e spuntini. Distribuisci le calorie su tutta la giornata.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">2</span>
+                            <span class="rule-text">Proteina in OGNI pasto</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Anche negli spuntini: yogurt greco, bresaola, uova, mandorle. La sintesi proteica funziona meglio se distribuita.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">3</span>
+                            <span class="rule-text">Carbo intorno all'allenamento</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Spuntino pre-workout + pasto post-workout devono essere i più ricchi di carboidrati.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">4</span>
+                            <span class="rule-text">Olio d'oliva è tuo amico</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>10g (1 cucchiaio) per pasto — grassi buoni e calorie facili per raggiungere il surplus.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">5</span>
+                            <span class="rule-text">Bevi 2-2.5L acqua</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Durante la massa è ancora più importante per la sintesi proteica e il recupero muscolare.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">6</span>
+                            <span class="rule-text">Domenica è flex</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Mangia libero ma non saltare le proteine. Goditi il pasto, la consistenza a lungo termine conta più della perfezione.</p>
+                        </div>
+                    </div>
+                    <div class="rule-item" data-expandable>
+                        <div class="rule-header">
+                            <span class="rule-number">7</span>
+                            <span class="rule-text">Frullato di emergenza</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <p>Se non riesci a mangiare tutto: <strong>300ml latte s.l. + 1 banana + 30g avena + 20g burro di arachidi = ~450 kcal</strong>. Si beve in 2 minuti.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>📈 Come Monitorare</h3>
+                
+                <div class="monitor-timeline">
+                    <div class="monitor-phase" data-expandable>
+                        <div class="phase-header">
+                            <span class="phase-badge">Prime 2 settimane</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ol class="clean-list numbered">
+                                <li>Pesati ogni mattina a digiuno dopo il bagno</li>
+                                <li>Fai la media settimanale del peso (non guardare il giorno singolo)</li>
+                                <li>Traccia su Jarvis/Notion</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="monitor-phase" data-expandable>
+                        <div class="phase-header">
+                            <span class="phase-badge">Dopo 2 settimane</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ul class="clean-list">
+                                <li><strong>Non prendi peso?</strong> Aggiungi 200 kcal/giorno (50g riso in più a pranzo e cena)</li>
+                                <li><strong>Troppo peso (&gt;0.5 kg/sett)?</strong> Riduci di 100 kcal (meno olio o meno riso)</li>
+                                <li><strong>Target ideale:</strong> +0.25-0.5 kg/settimana (1-2 kg al mese)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="monitor-phase" data-expandable>
+                        <div class="phase-header">
+                            <span class="phase-badge">Dopo 1 mese</span>
+                            <span class="expand-icon">﹀</span>
+                        </div>
+                        <div class="macro-detail hidden">
+                            <ul class="clean-list">
+                                <li>Rivaluta macro e calorie in base ai risultati</li>
+                                <li>Se ti alleni intensamente 5x/settimana, potresti dover salire a <strong>2.700-2.800 kcal</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card avoid-card">
+                <h3>🚫 Errori da Evitare</h3>
+                <div class="errors-list">
+                    <div class="error-item">
+                        <span class="error-icon">❌</span>
+                        <div>
+                            <strong>Non mangiare troppo poco</strong>
+                            <p>Sei in massa, devi mangiare. Il surplus calorico è necessario.</p>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <span class="error-icon">❌</span>
+                        <div>
+                            <strong>Non saltare i carboidrati</strong>
+                            <p>Sono il 59% delle tue calorie per un motivo. Senza carbo non costruisci muscolo.</p>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <span class="error-icon">❌</span>
+                        <div>
+                            <strong>Non avere paura del grasso</strong>
+                            <p>Un po' di grasso corporeo in massa è NORMALE. Si taglia dopo in definizione.</p>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <span class="error-icon">❌</span>
+                        <div>
+                            <strong>Non pesarti con ansia</strong>
+                            <p>Guarda la media settimanale, non il singolo giorno.</p>
+                        </div>
+                    </div>
+                    <div class="error-item">
+                        <span class="error-icon">❌</span>
+                        <div>
+                            <strong>Non fare pasti enormi e saltare gli altri</strong>
+                            <p>Distribuisci su 5 pasti per massimizzare la sintesi proteica.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card footer-card">
+                <p>Piano alimentare creato il <strong>7 marzo 2026</strong>.</p>
+                <p>Da rivalutare dopo 4 settimane con dati peso reali.</p>
+                <p><em>Prossimi step: piano allenamento palestra a casa per massa.</em></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom spacer for mobile nav -->
+    <div class="bottom-spacer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
