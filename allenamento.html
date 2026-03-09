@@ -21,6 +21,7 @@
     <div class="page-switcher">
         <a href="index.html" class="page-link">🍽️ Alimentazione</a>
         <a href="allenamento.html" class="page-link active">🏋️ Allenamento</a>
+        <a href="routine.html" class="page-link">⏰ Routine</a>
     </div>
 
     <!-- Header -->
@@ -1168,8 +1169,18 @@
 
     </main>
 
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop" aria-label="Torna su"><span>↑</span></button>
+
     <div class="bottom-spacer"></div>
 
     <script src="script.js"></script>
+    <script>
+        const backToTop = document.getElementById('backToTop');
+        if (backToTop) {
+            window.addEventListener('scroll', () => backToTop.classList.toggle('visible', window.scrollY > 400));
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+    </script>
 </body>
 </html>

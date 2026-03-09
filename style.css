@@ -1342,6 +1342,14 @@ body {
     justify-content: center;
     gap: 4px;
     padding: 12px 16px 0;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.page-switcher::-webkit-scrollbar {
+    display: none;
 }
 
 .page-link {
@@ -1823,4 +1831,321 @@ body {
     font-weight: 600;
     color: var(--accent);
     font-size: 0.78rem;
+}
+
+/* ============================================
+   ROUTINE PAGE — Extra Styles
+   ============================================ */
+
+/* --- Quick Jump --- */
+.routine-quick-jump .quick-jump-btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.quick-jump-btn {
+    padding: 10px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-secondary);
+    font-family: var(--font);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quick-jump-btn:hover {
+    background: var(--glass-bg-hover);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Routine Blocks --- */
+.routine-block {
+    margin-bottom: 28px;
+}
+
+.routine-block-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.routine-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.routine-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.routine-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.routine-item.deep-work {
+    border-left: 3px solid var(--danger);
+    background: rgba(255, 69, 58, 0.06);
+}
+
+.routine-item.operativo {
+    border-left: 3px solid var(--warning);
+    background: rgba(255, 159, 10, 0.06);
+}
+
+.routine-item.formazione,
+.routine-item.studio {
+    border-left: 3px solid var(--success);
+    background: rgba(48, 209, 88, 0.06);
+}
+
+.routine-time {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    min-width: 95px;
+    flex-shrink: 0;
+}
+
+.routine-body {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.routine-body strong {
+    color: var(--text-primary);
+}
+
+/* --- Ore Summary --- */
+.ore-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ore-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.ore-row.total {
+    background: var(--accent-glow);
+    border: 1px solid rgba(10, 132, 255, 0.25);
+    margin-top: 8px;
+}
+
+/* --- Phase Cards --- */
+.phase-header-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.phase-badge-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #5e5ce6);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.phase-header-card h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.phase-days {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.phase-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 12px;
+}
+
+/* --- Sessioni Università --- */
+.sessioni-table {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sessione-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+.sessione-row.next {
+    background: rgba(10, 132, 255, 0.12);
+    border: 1px solid rgba(10, 132, 255, 0.25);
+}
+
+.sessione-row.done {
+    opacity: 0.7;
+}
+
+/* --- Week Focus --- */
+.week-focus {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.day-focus {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+}
+
+.day-focus.rest {
+    background: rgba(255, 255, 255, 0.02);
+    opacity: 0.85;
+}
+
+.day-name {
+    font-weight: 700;
+    min-width: 36px;
+    color: var(--accent);
+}
+
+.day-extra {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-left: auto;
+}
+
+/* --- Obiettivi Grid --- */
+.obiettivi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.obiettivo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+}
+
+.obiettivo-area {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* --- Checklist --- */
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.checklist-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.checklist-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
+.checklist-item:has(input:checked) {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+/* --- Back to Top --- */
+.back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    box-shadow: var(--glass-shadow);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--glass-bg-hover);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
