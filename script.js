@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initExpandables();
     initProgressBars();
     initTooltips();
-    initScrollEffects();
+    initNavbarShadow();
 });
 
 /* --- Navigation --- */
@@ -149,53 +149,12 @@ function initTooltips() {
     });
 }
 
-/* --- Scroll Effects --- */
-function initScrollEffects() {
+/* --- Navbar shadow on scroll (lightweight) --- */
+function initNavbarShadow() {
     const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
+    if (!navbar) return;
 
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Add shadow when scrolled
-        if (currentScroll > 10) {
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
+        navbar.style.boxShadow = window.pageYOffset > 10 ? '0 4px 20px rgba(0,0,0,0.25)' : 'none';
     }, { passive: true });
-
-    // Intersection observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe glass cards
-    document.querySelectorAll('.glass-card').forEach((card, i) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `opacity 0.5s ease ${i * 0.05}s, transform 0.5s ease ${i * 0.05}s, background 0.3s ease, border-color 0.3s ease`;
-        observer.observe(card);
-    });
-
-    // Also observe callouts
-    document.querySelectorAll('.callout').forEach((callout) => {
-        callout.style.opacity = '0';
-        callout.style.transform = 'translateY(20px)';
-        callout.style.transition = 'opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s';
-        observer.observe(callout);
-    });
 }

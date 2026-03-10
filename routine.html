@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Animated background blobs -->
@@ -60,49 +60,12 @@
 
             <div class="glass-card">
                 <p class="card-intro">Rispetto alla v1, ecco cosa cambia subito.</p>
-                <div class="rules-list">
-                    <div class="rule-item" data-expandable>
-                        <div class="rule-header">
-                            <span class="rule-number">1</span>
-                            <span class="rule-text">Ore di lavoro aumentate subito</span>
-                            <span class="expand-icon">﹀</span>
-                        </div>
-                        <div class="macro-detail hidden">
-                            <p>Si parte con 3-4h/giorno dal Day 1, target finale 6-8h/giorno.</p>
-                        </div>
-                    </div>
-                    <div class="rule-item" data-expandable>
-                        <div class="rule-header">
-                            <span class="rule-number">2</span>
-                            <span class="rule-text">Formazione inclusa nel conteggio</span>
-                            <span class="expand-icon">﹀</span>
-                        </div>
-                        <div class="macro-detail hidden">
-                            <p>1-2h di formazione (libri, corsi, università) contano come ore produttive.</p>
-                        </div>
-                    </div>
-                    <div class="rule-item" data-expandable>
-                        <div class="rule-header">
-                            <span class="rule-number">3</span>
-                            <span class="rule-text">Calendario università Roma Tre</span>
-                            <span class="expand-icon">﹀</span>
-                        </div>
-                        <div class="macro-detail hidden">
-                            <p><strong>Sessione estiva:</strong> 3 giugno – 31 luglio 2026 ← PROSSIMA<br>
-                            <strong>Sessione autunnale:</strong> 1 – 26 settembre 2026</p>
-                        </div>
-                    </div>
-                    <div class="rule-item" data-expandable>
-                        <div class="rule-header">
-                            <span class="rule-number">4</span>
-                            <span class="rule-text">Studio università ciclico</span>
-                            <span class="expand-icon">﹀</span>
-                        </div>
-                        <div class="macro-detail hidden">
-                            <p>Intensità variabile in base alla vicinanza delle sessioni d'esame.</p>
-                        </div>
-                    </div>
-                </div>
+                <ul class="clean-list">
+                    <li><strong>1. Ore di lavoro:</strong> Si parte con 3-4h/giorno dal Day 1, target finale 6-8h/giorno.</li>
+                    <li><strong>2. Formazione:</strong> 1-2h (libri, corsi, università) contano come ore produttive.</li>
+                    <li><strong>3. Calendario Roma Tre:</strong> Sessione estiva 3 giu – 31 lug 2026 ← PROSSIMA. Autunnale 1 – 26 set 2026.</li>
+                    <li><strong>4. Studio ciclico:</strong> Intensità variabile in base alla vicinanza delle sessioni.</li>
+                </ul>
             </div>
         </section>
 
@@ -305,16 +268,15 @@
         <section id="fasi" class="section">
             <h2 class="section-title">📅 Piano Implementazione (4 Fasi)</h2>
 
-            <div class="phase-card glass-card" data-expandable>
+            <div class="phase-card glass-card">
                 <div class="phase-header-card">
                     <span class="phase-badge-num">1</span>
                     <div>
                         <h3>Fase 1 — "Le Fondamenta"</h3>
                         <p class="phase-days">Giorni 1-10</p>
                     </div>
-                    <span class="expand-icon">﹀</span>
                 </div>
-                <div class="macro-detail hidden">
+                <div class="phase-content">
                     <p><strong>Obiettivo:</strong> Stabilizzare sonno + 3-4h lavoro produttivo.</p>
                     <ul class="clean-list">
                         <li>Sveglia fissa alle 8:00 — dall'altra parte della stanza</li>
@@ -333,16 +295,15 @@
                 </div>
             </div>
 
-            <div class="phase-card glass-card" data-expandable>
+            <div class="phase-card glass-card">
                 <div class="phase-header-card">
                     <span class="phase-badge-num">2</span>
                     <div>
                         <h3>Fase 2 — "Il Ritmo"</h3>
                         <p class="phase-days">Giorni 11-20</p>
                     </div>
-                    <span class="expand-icon">﹀</span>
                 </div>
-                <div class="macro-detail hidden">
+                <div class="phase-content">
                     <p><strong>Obiettivo:</strong> 5-6h produttive + prime abitudini.</p>
                     <ul class="clean-list">
                         <li>Sveglia anticipata alle 7:30</li>
@@ -358,16 +319,15 @@
                 </div>
             </div>
 
-            <div class="phase-card glass-card" data-expandable>
+            <div class="phase-card glass-card">
                 <div class="phase-header-card">
                     <span class="phase-badge-num">3</span>
                     <div>
                         <h3>Fase 3 — "La Macchina"</h3>
                         <p class="phase-days">Giorni 21-40</p>
                     </div>
-                    <span class="expand-icon">﹀</span>
                 </div>
-                <div class="macro-detail hidden">
+                <div class="phase-content">
                     <p><strong>Obiettivo:</strong> Routine quasi completa, 6.5-7h produttive.</p>
                     <ul class="clean-list">
                         <li>Meditazione mattutina 10 min</li>
@@ -385,16 +345,15 @@
                 </div>
             </div>
 
-            <div class="phase-card glass-card" data-expandable>
+            <div class="phase-card glass-card">
                 <div class="phase-header-card">
                     <span class="phase-badge-num">4</span>
                     <div>
                         <h3>Fase 4 — "Il Sistema"</h3>
                         <p class="phase-days">Giorni 41-90</p>
                     </div>
-                    <span class="expand-icon">﹀</span>
                 </div>
-                <div class="macro-detail hidden">
+                <div class="phase-content">
                     <p><strong>Obiettivo:</strong> Routine completa, 7-8h produttive.</p>
                     <ul class="clean-list">
                         <li>Allenamento 1h/giorno</li>
@@ -426,37 +385,19 @@
                 </div>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>🟢</span>
-                    <h3>Fase Mantenimento (Ora → 30 Aprile)</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>Studio: 30 min/giorno (sera) + 1-2h sabato. Focus: ripassare appunti, procurarsi materiale.</p>
-                </div>
+            <div class="glass-card">
+                <h3>🟢 Fase Mantenimento (Ora → 30 Aprile)</h3>
+                <p>Studio: 30 min/giorno (sera) + 1-2h sabato. Focus: ripassare appunti, procurarsi materiale.</p>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>🟡</span>
-                    <h3>Fase Preparazione (1 Maggio → 31 Maggio)</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>Studio: 1h/giorno + blocco formazione convertito in studio. Target: 1-2 esami sessione estiva. Totale ~1.5-2h/giorno.</p>
-                </div>
+            <div class="glass-card">
+                <h3>🟡 Fase Preparazione (1 Maggio → 31 Maggio)</h3>
+                <p>Studio: 1h/giorno + blocco formazione convertito in studio. Target: 1-2 esami sessione estiva. Totale ~1.5-2h/giorno.</p>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>🔴</span>
-                    <h3>Fase Intensiva (1 Giugno → esame)</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>Studio: 2-2.5h/giorno. Blocco formazione + serale = entrambi studio. Riduci progetto personale a 30 min. Deep Work lavoro: mantieni 4h.</p>
-                </div>
+            <div class="glass-card">
+                <h3>🔴 Fase Intensiva (1 Giugno → esame)</h3>
+                <p>Studio: 2-2.5h/giorno. Blocco formazione + serale = entrambi studio. Riduci progetto personale a 30 min. Deep Work lavoro: mantieni 4h.</p>
             </div>
         </section>
 
@@ -491,80 +432,50 @@
         <section id="strumenti" class="section">
             <h2 class="section-title">🧠 Strumenti & Piani</h2>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>🍅</span>
-                    <h3>Toolkit Anti-Procrastinazione</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <ul class="clean-list">
-                        <li><strong>Pomodoro:</strong> 25 min lavoro → 5 min pausa. App: Forest, Focus To-Do.</li>
-                        <li><strong>Regola 2 minuti:</strong> Task &lt; 2 min → fallo SUBITO.</li>
-                        <li><strong>Eat the Frog:</strong> Task più difficile PER PRIMO (Blocco 1).</li>
-                        <li><strong>Non spezzare la catena:</strong> X sul calendario ogni giorno completato.</li>
-                        <li><strong>Ambiente anti-distrazione:</strong> Telefono altra stanza, notifiche OFF, BlockSite.</li>
-                    </ul>
-                </div>
+            <div class="glass-card">
+                <h3>🍅 Toolkit Anti-Procrastinazione</h3>
+                <ul class="clean-list">
+                    <li><strong>Pomodoro:</strong> 25 min lavoro → 5 min pausa. App: Forest, Focus To-Do.</li>
+                    <li><strong>Regola 2 minuti:</strong> Task &lt; 2 min → fallo SUBITO.</li>
+                    <li><strong>Eat the Frog:</strong> Task più difficile PER PRIMO (Blocco 1).</li>
+                    <li><strong>Non spezzare la catena:</strong> X sul calendario ogni giorno completato.</li>
+                    <li><strong>Ambiente anti-distrazione:</strong> Telefono altra stanza, notifiche OFF, BlockSite.</li>
+                </ul>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>📱</span>
-                    <h3>Piano Digital Detox</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>Target: da 12-13h → sotto 3h (uso personale)</p>
-                    <ul class="clean-list">
-                        <li>Niente telefono primi 30 min dopo sveglia</li>
-                        <li>Niente telefono a letto — carica altra stanza</li>
-                        <li>Niente telefono durante i pasti</li>
-                        <li>Social solo: 13:30-14:00 e 18:30-19:00</li>
-                        <li>Disattiva TUTTE le notifiche</li>
-                        <li>Schermo in scala di grigi dopo le 21:00</li>
-                    </ul>
-                </div>
+            <div class="glass-card">
+                <h3>📱 Piano Digital Detox</h3>
+                <p>Target: da 12-13h → sotto 3h (uso personale)</p>
+                <ul class="clean-list">
+                    <li>Niente telefono primi 30 min dopo sveglia</li>
+                    <li>Niente telefono a letto — carica altra stanza</li>
+                    <li>Niente telefono durante i pasti</li>
+                    <li>Social solo: 13:30-14:00 e 18:30-19:00</li>
+                    <li>Disattiva TUTTE le notifiche</li>
+                    <li>Schermo in scala di grigi dopo le 21:00</li>
+                </ul>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>💧</span>
-                    <h3>Piano Idratazione</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>Da 0.5L → Target: 2-2.5L/giorno</p>
-                    <ul class="clean-list">
-                        <li>500ml appena sveglio (bottiglia sul comodino)</li>
-                        <li>Bottiglia 2L sulla scrivania</li>
-                        <li>1 bicchiere prima di ogni pasto</li>
-                        <li>Promemoria ogni 2h</li>
-                    </ul>
-                </div>
+            <div class="glass-card">
+                <h3>💧 Piano Idratazione</h3>
+                <p>Da 0.5L → Target: 2-2.5L/giorno</p>
+                <ul class="clean-list">
+                    <li>500ml appena sveglio (bottiglia sul comodino)</li>
+                    <li>Bottiglia 2L sulla scrivania</li>
+                    <li>1 bicchiere prima di ogni pasto</li>
+                    <li>Promemoria ogni 2h</li>
+                </ul>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>📓</span>
-                    <h3>Journaling</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p><strong>Mattina (5-10 min):</strong> 3 gratitudini, 3 priorità, "Cosa farebbe la versione migliore di me?"</p>
-                    <p><strong>Sera (10 min):</strong> Cosa è andato bene? Cosa migliorare? Ho rispettato la routine? Una lezione imparata?</p>
-                </div>
+            <div class="glass-card">
+                <h3>📓 Journaling</h3>
+                <p><strong>Mattina (5-10 min):</strong> 3 gratitudini, 3 priorità, "Cosa farebbe la versione migliore di me?"</p>
+                <p><strong>Sera (10 min):</strong> Cosa è andato bene? Cosa migliorare? Ho rispettato la routine? Una lezione imparata?</p>
             </div>
 
-            <div class="glass-card" data-expandable>
-                <div class="phase-header-card">
-                    <span>🧘</span>
-                    <h3>Meditazione</h3>
-                    <span class="expand-icon">﹀</span>
-                </div>
-                <div class="macro-detail hidden">
-                    <p>5-10 min, poi 15-20 min. Dopo journaling mattutino. Inspira 4s, trattieni 4s, espira 6s. App: Petit BamBou, Headspace, Insight Timer.</p>
-                </div>
+            <div class="glass-card">
+                <h3>🧘 Meditazione</h3>
+                <p>5-10 min, poi 15-20 min. Dopo journaling mattutino. Inspira 4s, trattieni 4s, espira 6s. App: Petit BamBou, Headspace, Insight Timer.</p>
             </div>
 
             <div class="glass-card">
